@@ -11,67 +11,38 @@
     
     <body>
     <div id="wrapper">
-    <div id="canvas">
-    
-
- 
         
-    </div>
+        <div id="canvas">
+        </div>
     
     </div>
+    
     </body>
     
     <script>
 
-for(let j=0;j<16;j++) {
-for(let i=0;i<16;i++) {
+        for(let j=0;j<16;j++) {
+            for(let i=0;i<16;i++) {
     
-    const canvas=document.getElementById("canvas");
-    const div=document.createElement("div");
-    div.classList.add("blocks");
-        div.onmouseover = function() {
-    		var nameOfClass = "yourClassName";
+                const canvas=document.getElementById("canvas");
+                const div=document.createElement("div");
+                div.classList.add("blocks");
+                div.onmouseover = function() {
+    		      var nameOfClass = "yourClassName";
+    		      if (div.classList) {
+    			     div.classList.add("blocks1");
+    		      }
     		
-    		// Some browsers do not support "classList". So, it's necessary to write a condition to see if the current browser supports it.
-    		if (div.classList) {
-    			div.classList.add("blocks1");
-    		}
-    		else {
-    			// If your browser does not support it, you'll have to use "className" property. Then, you can use a Regular Expression to validate if the class name exists.
-    			var regExp = new RegExp('(\\s|^)' + "blocks1" + '(\\s|$)');
-    			// Will add class if it's not found by validating the regular expression
-    			if (!element.className.match(regExp)) {
-    				element.className += " " + "blocks1";
-    			}
-    		}
-     	}
-    canvas.appendChild(div);
-}
+     	        }
+                canvas.appendChild(div);
+            }
 
-const canvas=document.getElementById("canvas");
-const breaks=document.createElement("br");
-const div=document.getElementsByClassName("blocks");
-canvas.appendChild(breaks);
-
-    div.onmouseover = function() {
-    		var nameOfClass = "yourClassName";
-    		
-    		// Some browsers do not support "classList". So, it's necessary to write a condition to see if the current browser supports it.
-    		if (div.classList) {
-    			div.classList.add("blocks1");
-    		}
-    		else {
-    			// If your browser does not support it, you'll have to use "className" property. Then, you can use a Regular Expression to validate if the class name exists.
-    			var regExp = new RegExp('(\\s|^)' + "blocks1" + '(\\s|$)');
-    			// Will add class if it's not found by validating the regular expression
-    			if (!div.className.match(regExp)) {
-    				div.className += " " + "blocks1";
-    			}
-    		}
-     	}
+        const breaks=document.createElement("br");
+        canvas.appendChild(breaks);
 
 
-}
+
+        }
 
 
 
