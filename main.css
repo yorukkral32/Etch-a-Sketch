@@ -33,3 +33,9 @@ body {
 .blocks1 {
     background-color: greenyellow;
 }
+.reset {
+  display: block;
+  margin: 0 auto;
+  padding: 0px 8px;
+  font-size: 25px;
+}
