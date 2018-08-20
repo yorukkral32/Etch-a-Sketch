@@ -10,14 +10,14 @@
     </head>
     
     <body>
+    <button class="reset" onclick="changeDimensions()">Reset</button>
     <div id="wrapper">
         
         <div id="canvas">
         </div>
     
     </div>
-<input type="button" value="Reset all fields"
-          onClick="resetForm()"/>  
+
     </body>
     
     <script>
@@ -29,7 +29,6 @@
                 const div=document.createElement("div");
                 div.classList.add("blocks");
                 div.onmouseover = function() {
-    		      var nameOfClass = "yourClassName";
     		      if (div.classList) {
     			     div.classList.add("blocks1");
     		      }
@@ -44,9 +43,39 @@
 
 
         }
- function resetForm(){
-var x= <oninput
- } 
+        
+        
+        
+
+        function changeDimensions() {
+
+            Array.from(document.querySelectorAll('.blocks')).forEach(gridItem => {
+                gridItem.remove();
+            });
+
+            var input = prompt('Input the dimension between 2-24(e.g., input 16 for a 16x16 grid).');
+            for(let j=0;j<input;j++) {
+            for(let i=0;i<input;i++) {
+    
+                const canvas=document.getElementById("canvas");
+                const div=document.createElement("div");
+                div.classList.add("blocks");
+                div.onmouseover = function() {
+    		      if (div.classList) {
+    			     div.classList.add("blocks1");
+    		      }
+    		
+     	        }
+                canvas.appendChild(div);
+            }
+
+            const breaks=document.createElement("br");
+            canvas.appendChild(breaks);
+            
+            }
+        }
+        
+       
         
 
 

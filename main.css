@@ -9,16 +9,17 @@ body {
 #canvas {
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 400px;
+    width: 800px;
+    height: 500px;
     border-style: solid;
     border-color:black;
-    background-color: aliceblue;
+    background-color: bisque;
     display: inline-block;
     text-align: center;
 
 }
 .blocks {
+    border-width: thin;
     padding: 0;
     margin:0;
     display: inline-block;
@@ -26,16 +27,23 @@ body {
     height: 15px;
     border-style: solid;
     border-color: black;
-    background-color: deeppink;
+    background-color: whitesmoke;
     
     
 }
 .blocks1 {
-    background-color: greenyellow;
+    background-color: black;
 }
-.reset {
-  display: block;
+button {
+
+  display: inline-block;
   margin: 0 auto;
   padding: 0px 8px;
   font-size: 25px;
+    
+
 }
+#buttons {
+    text-align: center;
+}
+

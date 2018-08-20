@@ -10,7 +10,12 @@
     </head>
     
     <body>
-    <button class="reset" onclick="changeDimensions()">Reset</button>
+    <div id="buttons">
+    <button class="reset" onclick="changeDimensions()">Reset!</button>
+    <button id="rainbow">Rainbow Effect!</button>
+    <br>
+    <br>
+        </div>
     <div id="wrapper">
         
         <div id="canvas">
@@ -20,67 +25,4 @@
 
     </body>
     
-    <script>
-
-        for(let j=0;j<16;j++) {
-            for(let i=0;i<16;i++) {
-    
-                const canvas=document.getElementById("canvas");
-                const div=document.createElement("div");
-                div.classList.add("blocks");
-                div.onmouseover = function() {
-    		      if (div.classList) {
-    			     div.classList.add("blocks1");
-    		      }
-    		
-     	        }
-                canvas.appendChild(div);
-            }
-
-        const breaks=document.createElement("br");
-        canvas.appendChild(breaks);
-
-
-
-        }
-        
-        
-        
-
-        function changeDimensions() {
-
-            Array.from(document.querySelectorAll('.blocks')).forEach(gridItem => {
-                gridItem.remove();
-            });
-
-            var input = prompt('Input the dimension (e.g., input 16 for a 16x16 grid).');
-            for(let j=0;j<input;j++) {
-            for(let i=0;i<input;i++) {
-    
-                const canvas=document.getElementById("canvas");
-                const div=document.createElement("div");
-                div.classList.add("blocks");
-                div.onmouseover = function() {
-    		      if (div.classList) {
-    			     div.classList.add("blocks1");
-    		      }
-    		
-     	        }
-                canvas.appendChild(div);
-            }
-
-            const breaks=document.createElement("br");
-            canvas.appendChild(breaks);
-            
-            }
-        }
-        
-       
-        
-
-
-
-
-
-
-    </script>
+    <script src="etch.js"></script>
